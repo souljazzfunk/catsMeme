@@ -48,12 +48,15 @@ const displayCatImage = (cats) => {
 const hideMemeModal = () => {
     memeModal.style.display = 'none'
 }
+
 memeModalCloseBtn.addEventListener('click', hideMemeModal)
+
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         hideMemeModal()
     }
 })
+
 document.addEventListener('click', (e) => {
     const isTargetModal = e.target === memeModal || memeModal.contains(e.target)
     const isTargetGetImageBtn = e.target === getImageBtn
